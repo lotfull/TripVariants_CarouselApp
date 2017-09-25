@@ -8,7 +8,17 @@
 
 import UIKit
 
+protocol TripCollectionCellDelegate {
+    func didLikeButtonPressed(cell: TripCVCell)
+}
+
 class TripCVCell: UICollectionViewCell {
+    
+    var delegate: TripCollectionCellDelegate?
+    
+    @IBAction func likeButtonPressed(_ sender: Any) {
+        delegate?.didLikeButtonPressed(cell: self)
+    }
     
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var cityLabel: UILabel!
@@ -18,9 +28,7 @@ class TripCVCell: UICollectionViewCell {
     @IBOutlet var likeButton: UIButton!
     var isLiked:Bool = false {
         didSet {
-            if isLiked {
-                likeButton.titleLabel?.text = "♥️" } else {
-                likeButton.titleLabel?.text = "⭕️" }
+            likeButton.titleLabel?.text = isLiked ? "♥️" : "⭕️"
         }
     }
 }

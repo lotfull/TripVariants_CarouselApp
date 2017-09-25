@@ -8,14 +8,19 @@
 
 import UIKit
 
-class TripVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class TripVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, TripCollectionCellDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        collectionView.backgroundColor = UIColor.clear
+        if UIScreen.main.bounds.size.height == 568.0 {
+            let flowLayout = self.collectionView.collectionViewLayout as! UICollectionViewFlowLayout
+            flowLayout.itemSize = CGSize(width: 250.0, height: 330.0)
+        }
     }
     
-    func numberOfSections(in collectionView: UICollectionView) -> Int { return 1
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -34,7 +39,15 @@ class TripVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
         cell.isLiked = trips[indexPath.row].isLiked
         // Apply round corner
         cell.layer.cornerRadius = 4.0
+        cell.delegate = self
         return cell
+    }
+    
+    func didLikeButtonPressed(cell: TripCVCell) {
+        if let indexPath = collectionView.indexPath(for: cell) {
+            trips[indexPath.row].isLiked = !trips[indexPath.row].isLiked
+            cell.isLiked = trips[indexPath.row].isLiked
+        }
     }
     
     private var trips = [

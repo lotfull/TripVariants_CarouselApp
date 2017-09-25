@@ -60,9 +60,9 @@
 			children = (
 				911127741F66D99A00BA06F1 /* AppDelegate.swift */,
 				911127761F66D99A00BA06F1 /* TripVC.swift */,
-				911127781F66D99A00BA06F1 /* Main.storyboard */,
 				9168F7751F7960B5006ACCD1 /* Trip.swift */,
 				9168F7731F795D82006ACCD1 /* TripCVCell.swift */,
+				911127781F66D99A00BA06F1 /* Main.storyboard */,
 				9111277B1F66D99B00BA06F1 /* Assets.xcassets */,
 				9111277D1F66D99B00BA06F1 /* LaunchScreen.storyboard */,
 				911127801F66D99B00BA06F1 /* Info.plist */,
