@@ -25,7 +25,6 @@
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="97F-0U-CCM">
                                 <rect key="frame" x="0.0" y="69" width="320" height="430"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="430" id="orU-dC-9a3"/>
                                 </constraints>
@@ -53,13 +52,21 @@
                                                             <rect key="frame" x="102.5" y="5" width="45" height="60"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                             <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                            <state key="normal" title="♥️"/>
+                                                            <state key="normal" title="⭕️"/>
                                                             <connections>
                                                                 <action selector="likeButtonPressed:" destination="XQF-rn-0bv" eventType="touchUpInside" id="MH3-RH-pzo"/>
                                                             </connections>
                                                         </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9m6-SO-rdo">
+                                                            <rect key="frame" x="212" y="31" width="30" height="30"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                                            <state key="normal" title="ℹ︎">
+                                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            </state>
+                                                        </button>
                                                     </subviews>
-                                                    <color key="backgroundColor" red="0.72150450944900513" green="0.72160977125167847" blue="0.72148138284683228" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="backgroundColor" red="0.19153538223140498" green="0.19153538223140498" blue="0.19153538223140498" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstItem="hzP-48-Yzd" firstAttribute="centerY" secondItem="iZx-1B-SK4" secondAttribute="centerY" id="4dq-4U-cTf"/>
                                                         <constraint firstItem="hzP-48-Yzd" firstAttribute="centerX" secondItem="iZx-1B-SK4" secondAttribute="centerX" id="cSg-vp-aO6"/>
@@ -131,18 +138,29 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Most Popular Destinations" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zPu-fr-3bC">
                                 <rect key="frame" x="16" y="40" width="201" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TripCARD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DJZ-aS-q8j">
                                 <rect key="frame" x="16" y="527" width="75" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7qi-KL-04B">
+                                <rect key="frame" x="279" y="35" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="0e4-xc-Q1p"/>
+                                    <constraint firstAttribute="width" constant="25" id="Oqd-XS-i5o"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="48"/>
+                                <state key="normal" title="+"/>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.12782476756198347" green="0.12782476756198347" blue="0.12782476756198347" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="7qi-KL-04B" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="15" id="Ji7-qy-DkU"/>
+                            <constraint firstItem="7qi-KL-04B" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="KcS-Xd-EgJ"/>
                             <constraint firstItem="97F-0U-CCM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="O6u-od-AkG"/>
                             <constraint firstItem="DJZ-aS-q8j" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="cab-rm-mYP"/>
                             <constraint firstItem="97F-0U-CCM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="g3I-1v-8rt"/>
@@ -159,7 +177,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-23.199999999999999" y="138.98050974512745"/>
+            <point key="canvasLocation" x="-24.375" y="138.38028169014083"/>
         </scene>
     </scenes>
     <resources>

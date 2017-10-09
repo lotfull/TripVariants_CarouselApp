@@ -36,7 +36,7 @@ class TripVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
             trips[indexPath.row].featuredImage
         cell.priceLabel.text = "$\(String(trips[indexPath.row].price))"
         cell.totalDaysLabel.text = "\(trips[indexPath.row].totalDays) days"
-        cell.isLiked = trips[indexPath.row].isLiked
+        cell.likeButton.titleLabel?.text = trips[indexPath.row].isLiked ? "♥️" : "⭕️"
         // Apply round corner
         cell.layer.cornerRadius = 4.0
         cell.delegate = self
