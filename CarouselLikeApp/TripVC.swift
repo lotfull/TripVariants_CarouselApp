@@ -47,6 +47,7 @@ class TripVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
         if let indexPath = collectionView.indexPath(for: cell) {
             trips[indexPath.row].isLiked = !trips[indexPath.row].isLiked
             cell.isLiked = trips[indexPath.row].isLiked
+            self.collectionView.reloadItems(at: [indexPath])
         }
     }
     
